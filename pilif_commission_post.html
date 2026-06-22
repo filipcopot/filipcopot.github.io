@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Commission Post Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e5de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .post {
+    width: 1080px;
+    height: 1350px;
+    background: #FAF8F4;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* === Image block === */
+  .art-block {
+    position: relative;
+    width: 100%;
+    height: 760px;
+    background: #1A1A1A;
+    overflow: hidden;
+  }
+
+  .art-block img {
+    display: none;
+  }
+
+  .art-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1A1A1A 40%, #3a2a26 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .art-placeholder-label {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    color: rgba(250,248,244,0.35);
+    letter-spacing: 0.05em;
+  }
+
+  .art-block::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.55) 100%);
+  }
+
+  /* Exhibit tag — signature element */
+  .exhibit-tag {
+    position: absolute;
+    top: 48px;
+    right: -2px;
+    background: #8B3A2F;
+    color: #FAF8F4;
+    padding: 10px 22px 10px 26px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: right top;
+    z-index: 5;
+  }
+
+  /* === Body === */
+  .body-wrap {
+    padding: 56px 64px 0 64px;
+  }
+
+  .eyebrow {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8B3A2F;
+    margin-bottom: 18px;
+  }
+
+  .artist-name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0.92;
+    color: #1A1A1A;
+    letter-spacing: -0.01em;
+  }
+
+  .artist-sub {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+    color: #5a5650;
+    margin-top: 10px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #1A1A1A;
+    opacity: 0.15;
+    margin: 38px 0 32px 0;
+  }
+
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .detail-label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8a857c;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .detail-value {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    color: #1A1A1A;
+    font-weight: 500;
+  }
+
+  .detail-col { flex: 1; }
+  .detail-col.right { text-align: right; }
+
+  .footer-cta {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(26,26,26,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .handle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: #1A1A1A;
+  }
+
+  .cta-tag {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FAF8F4;
+    background: #1A1A1A;
+    padding: 12px 24px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div class="post">
+  <div class="art-block">
+    <div class="art-placeholder">
+      <span class="art-placeholder-label">[ Your Artwork Here ]</span>
+    </div>
+    <div class="exhibit-tag">Edition · Open Commission</div>
+  </div>
+
+  <div class="body-wrap">
+    <div class="eyebrow">Portraiture — Surrealist Studies — Street Work</div>
+    <div class="artist-name">PILIF</div>
+    <div class="artist-sub">Original works, made to order</div>
+
+    <div class="divider"></div>
+
+    <div class="details-row">
+      <div class="detail-col">
+        <div class="detail-label">Medium</div>
+        <div class="detail-value">Graphite / Acrylic</div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-label">Turnaround</div>
+        <div class="detail-value">7–14 Days</div>
+      </div>
+      <div class="detail-col right">
+        <div class="detail-label">Starting At</div>
+        <div class="detail-value">150 RON</div>
+      </div>
+    </div>
+
+    <div class="footer-cta">
+      <div class="handle">@pilif_draws</div>
+      <div class="cta-tag">Commissions Open</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
